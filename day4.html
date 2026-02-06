@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Day 🧸 - Day 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teddy-brown: #8b6f47;
+            --light-brown: #c4a66f;
+            --rose: #d4848c;
+            --cream: #fef9f3;
+            --soft-beige: #f5ebe0;
+            --text: #3a2a2e;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #f5ebe0 0%, var(--cream) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: var(--teddy-brown);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: var(--light-brown);
+        }
+
+        .day-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .day-emoji {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        .day-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--teddy-brown);
+            margin-bottom: 15px;
+        }
+
+        .day-date {
+            font-size: 1.2rem;
+            color: var(--light-brown);
+            margin-bottom: 10px;
+        }
+
+        .day-number {
+            font-size: 1rem;
+            color: var(--light-brown);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(139, 111, 71, 0.15);
+            border-left: 5px solid var(--teddy-brown);
+            animation: fadeInUp 0.8s ease-out;
+            animation-delay: 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message {
+            font-size: 1.25rem;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        .message p {
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: var(--teddy-brown);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .comfort-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .comfort-item {
+            background: var(--soft-beige);
+            padding: 30px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(139, 111, 71, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .comfort-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .comfort-emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .comfort-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .hug-section {
+            background: linear-gradient(135deg, var(--soft-beige), white);
+            padding: 40px;
+            border-radius: 25px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .hug-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--teddy-brown);
+            margin-bottom: 20px;
+        }
+
+        .hug-emoji-large {
+            font-size: 4rem;
+            margin: 20px 0;
+        }
+
+        .personal-note {
+            background: linear-gradient(135deg, var(--teddy-brown), var(--light-brown));
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            box-shadow: 0 15px 40px rgba(139, 111, 71, 0.3);
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--teddy-brown), transparent);
+            margin: 30px auto;
+        }
+
+        @media (max-width: 768px) {
+            .content-card {
+                padding: 35px 25px;
+            }
+
+            .message {
+                font-size: 1.1rem;
+            }
+
+            .comfort-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="week.html" class="back-button">← Back to Valentine's Week</a>
+
+        <div class="day-header">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="https://i.pinimg.com/736x/9b/5d/d1/9b5dd100a6cf5fd9b70a38df3556a9b1.jpg" 
+                     alt="Cute teddy bear" 
+                     style="width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 6px solid #c4a66f; box-shadow: 0 20px 50px rgba(139, 111, 71, 0.4);">
+            </div>
+            <div class="day-emoji">🧸</div>
+            <div class="day-number">Day 4 of 7</div>
+            <h1 class="day-title">Teddy Day</h1>
+            <p class="day-date">February 10, 2026</p>
+        </div>
+
+        <div class="content-card">
+            <div class="message">
+                <p>Dear Ojasya,</p>
+                
+                <p>Do you remember the feeling of hugging a teddy bear as a child? That sense of <span class="highlight">comfort, warmth, and safety</span>? That's what I hope to be for you — a source of comfort in both happy times and challenging ones.</p>
+
+                <p>Today is Teddy Day, and while I can't give you a physical teddy bear right now (though I'd love to!), I want you to know that you deserve all the warmth, care, and affection in the world.</p>
+
+                <div class="comfort-grid">
+                    <div class="comfort-item">
+                        <span class="comfort-emoji">🤗</span>
+                        <p class="comfort-text"><strong>Comfort</strong><br>I want to be someone you can turn to when you need reassurance</p>
+                    </div>
+
+                    <div class="comfort-item">
+                        <span class="comfort-emoji">💕</span>
+                        <p class="comfort-text"><strong>Warmth</strong><br>May you always feel the warmth of genuine care and affection</p>
+                    </div>
+
+                    <div class="comfort-item">
+                        <span class="comfort-emoji">✨</span>
+                        <p class="comfort-text"><strong>Joy</strong><br>I promise to bring smiles and laughter into your days</p>
+                    </div>
+
+                    <div class="comfort-item">
+                        <span class="comfort-emoji">🛡️</span>
+                        <p class="comfort-text"><strong>Safety</strong><br>You can always be yourself around me, without judgment</p>
+                    </div>
+                </div>
+
+                <p>Just like a teddy bear is always there when you need it, <span class="highlight">I want you to know that I'm here for you</span> — to celebrate your wins, to listen when you need to talk, and to remind you of how amazing you are when you forget.</p>
+
+                <div class="hug-section">
+                    <h3>Sending You a Virtual Hug</h3>
+                    <div class="hug-emoji-large">🤗</div>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">In this moment, imagine a warm, comforting hug — the kind that makes everything feel a little bit better. That's what I'm sending your way today. May you feel loved, valued, and appreciated, because you truly are all of those things and so much more.</p>
+                </div>
+
+                <p>Teddy bears are symbols of <span class="highlight">unconditional care and endless cuddles</span>. They don't judge, they don't leave, and they're always ready to provide comfort. That's the kind of presence I aspire to be in your life.</p>
+
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="personal-note">
+                <p><strong>A soft message for you:</strong></p>
+                <div class="decorative-line"></div>
+                <p>Ojasya, you deserve someone who makes you feel safe, cherished, and understood. I hope that as we continue this Valentine's Week journey, you feel all of that and more. Thank you for being someone I care about so deeply. Here's to comfort, cuddles, and Day 4! 🧸💕</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dayDate = new Date("February 10, 2026");
+        const now = new Date();
+        dayDate.setHours(0, 0, 0, 0);
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+        if (today < dayDate) {
+            alert("This day hasn't unlocked yet! Come back on February 10th 🧸");
+            window.location.href = 'week.html';
+        }
+
+        if (!localStorage.getItem('valentineAccepted')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

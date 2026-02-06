@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiss Day 💋 - Day 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --kiss-red: #e74c3c;
+            --light-red: #ec7063;
+            --rose: #d4848c;
+            --cream: #fef9f3;
+            --soft-red: #fadbd8;
+            --text: #3a2a2e;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #fadbd8 0%, var(--cream) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: var(--kiss-red);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: var(--light-red);
+        }
+
+        .day-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .day-emoji {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: kissFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes kissFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .day-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--kiss-red);
+            margin-bottom: 15px;
+        }
+
+        .day-date {
+            font-size: 1.2rem;
+            color: var(--light-red);
+            margin-bottom: 10px;
+        }
+
+        .day-number {
+            font-size: 1rem;
+            color: var(--light-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(231, 76, 60, 0.15);
+            border-left: 5px solid var(--kiss-red);
+            animation: fadeInUp 0.8s ease-out;
+            animation-delay: 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message {
+            font-size: 1.25rem;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        .message p {
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: var(--kiss-red);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .kiss-meanings {
+            margin: 50px 0;
+        }
+
+        .kiss-card {
+            background: linear-gradient(135deg, var(--soft-red), white);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--kiss-red);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .kiss-card:hover {
+            transform: translateX(10px);
+        }
+
+        .kiss-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .kiss-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--kiss-red);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .kiss-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .countdown-box {
+            background: linear-gradient(135deg, var(--kiss-red), var(--light-red));
+            color: white;
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 20px 50px rgba(231, 76, 60, 0.3);
+        }
+
+        .countdown-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .countdown-timer {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 30px 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .personal-note {
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid var(--kiss-red);
+            color: var(--text);
+            padding: 40px;
+            border-radius: 25px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.2);
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, white, transparent);
+            margin: 25px auto;
+        }
+
+        .kiss-trail {
+            text-align: center;
+            font-size: 2rem;
+            margin: 30px 0;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .content-card {
+                padding: 35px 25px;
+            }
+
+            .message {
+                font-size: 1.1rem;
+            }
+
+            .kiss-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .countdown-box {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="week.html" class="back-button">← Back to Valentine's Week</a>
+
+        <div class="day-header">
+            <div class="day-emoji">💋</div>
+            <div class="day-number">Day 7 of 7</div>
+            <h1 class="day-title">Kiss Day</h1>
+            <p class="day-date">February 13, 2026</p>
+        </div>
+
+        <div class="content-card">
+            <div class="message">
+                <p>Dear Ojasya,</p>
+                
+                <p>We've reached Day 7 — Kiss Day, the final day before Valentine's Day itself. This week has been a journey through roses, promises, chocolates, hugs, and so much more. Today, we celebrate <span class="highlight">affection, closeness, and all the little moments that make the heart flutter</span>.</p>
+
+                <p>A kiss, whether real or metaphorical, is one of the most intimate expressions of care. It's a symbol of connection, tenderness, and the special bond between two people.</p>
+
+                <div class="kiss-trail">
+                    💋 💕 💋 💕 💋
+                </div>
+            </div>
+
+            <div class="kiss-meanings">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--kiss-red); text-align: center; margin-bottom: 35px;">The Language of Affection</h3>
+
+                <div class="kiss-card">
+                    <span class="kiss-icon">😊</span>
+                    <div class="kiss-content">
+                        <h4>Forehead Kiss</h4>
+                        <p>The most protective and caring gesture — "I'll always look out for you."</p>
+                    </div>
+                </div>
+
+                <div class="kiss-card">
+                    <span class="kiss-icon">🌟</span>
+                    <div class="kiss-content">
+                        <h4>Hand Kiss</h4>
+                        <p>A sign of respect and admiration — "You deserve to be treated with care."</p>
+                    </div>
+                </div>
+
+                <div class="kiss-card">
+                    <span class="kiss-icon">💖</span>
+                    <div class="kiss-content">
+                        <h4>Cheek Kiss</h4>
+                        <p>Sweet and affectionate — "You make me smile and bring warmth to my days."</p>
+                    </div>
+                </div>
+
+                <div class="kiss-card">
+                    <span class="kiss-icon">✨</span>
+                    <div class="kiss-content">
+                        <h4>Surprise Kiss</h4>
+                        <p>Spontaneous and delightful — "I was thinking of you and couldn't help myself."</p>
+                    </div>
+                </div>
+
+                <div class="kiss-card">
+                    <span class="kiss-icon">💕</span>
+                    <div class="kiss-content">
+                        <h4>Gentle Kiss</h4>
+                        <p>Tender and meaningful — "You're precious to me and I cherish you."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <p>Today, on Kiss Day, I want you to feel the affection and warmth that every type of kiss represents. While I can't physically kiss your forehead, your hand, or your cheek, <span class="highlight">I can tell you that you're cherished, valued, and thought of with the utmost care</span>.</p>
+
+                <p>This entire week has been building up to tomorrow — Valentine's Day — but honestly? Every moment with you feels like Valentine's Day. You make ordinary days extraordinary just by being you.</p>
+            </div>
+
+            <div class="countdown-box">
+                <h3>Tomorrow is Valentine's Day!</h3>
+                <div class="decorative-line"></div>
+                <div class="countdown-timer">❤️ Less than 24 hours ❤️</div>
+                <p style="font-size: 1.25rem; line-height: 1.8; margin-top: 20px;">The culmination of our week together is almost here. I can't wait to celebrate the most romantic day of the year with you, Ojasya. Get ready for something special! 💕</p>
+            </div>
+
+            <div class="message">
+                <p>As we close out Kiss Day, I want to thank you for being part of this journey. For saying yes to being my Valentine. For reading these messages. For being <span class="highlight">exactly who you are</span>.</p>
+
+                <div style="text-align: center; margin: 40px 0; font-size: 3.5rem;">
+                    💋 💕 💋
+                </div>
+            </div>
+
+            <div class="personal-note">
+                <p><strong>💋 One more day to go! 💋</strong></p>
+                <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, var(--kiss-red), transparent); margin: 25px auto;"></div>
+                <p>Ojasya, we've shared roses, promises, chocolates, teddy bears, hugs, and now kisses (metaphorically speaking!). Tomorrow is the grand finale — Valentine's Day itself. I hope this week has made you smile, made you feel special, and reminded you of how truly wonderful you are. See you tomorrow for the most romantic day of all! 💋💕✨</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dayDate = new Date("February 13, 2026");
+        const now = new Date();
+        dayDate.setHours(0, 0, 0, 0);
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+        if (today < dayDate) {
+            alert("This day hasn't unlocked yet! Come back on February 13th 💋");
+            window.location.href = 'week.html';
+        }
+
+        if (!localStorage.getItem('valentineAccepted')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

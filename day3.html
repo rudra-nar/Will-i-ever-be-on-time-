@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Day 🍫 - Day 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --chocolate: #6b4423;
+            --light-chocolate: #8b6738;
+            --rose: #d4848c;
+            --deep-rose: #a85866;
+            --cream: #fef9f3;
+            --soft-pink: #ffeef2;
+            --text: #3a2a2e;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, var(--cream) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: var(--chocolate);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: var(--light-chocolate);
+        }
+
+        .day-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .day-emoji {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .day-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--chocolate);
+            margin-bottom: 15px;
+        }
+
+        .day-date {
+            font-size: 1.2rem;
+            color: var(--light-chocolate);
+            margin-bottom: 10px;
+        }
+
+        .day-number {
+            font-size: 1rem;
+            color: var(--light-chocolate);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(107, 68, 35, 0.15);
+            border-left: 5px solid var(--chocolate);
+            animation: fadeInUp 0.8s ease-out;
+            animation-delay: 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message {
+            font-size: 1.25rem;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        .message p {
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: var(--chocolate);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .chocolate-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .chocolate-item {
+            background: linear-gradient(135deg, #6b4423, #8b6738);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(107, 68, 35, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .chocolate-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .chocolate-emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .chocolate-label {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .sweet-quote {
+            background: #f5e6d3;
+            border-left: 4px solid var(--chocolate);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 15px;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .personal-note {
+            background: linear-gradient(135deg, var(--chocolate), var(--light-chocolate));
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            box-shadow: 0 15px 40px rgba(107, 68, 35, 0.3);
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--chocolate), transparent);
+            margin: 30px auto;
+        }
+
+        @media (max-width: 768px) {
+            .content-card {
+                padding: 35px 25px;
+            }
+
+            .message {
+                font-size: 1.1rem;
+            }
+
+            .chocolate-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="week.html" class="back-button">← Back to Valentine's Week</a>
+
+        <div class="day-header">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="https://i.pinimg.com/736x/b7/ed/00/b7ed009538f05ab8ffeb95c1f6167dbf.jpg" 
+                     alt="Sweet chocolates" 
+                     style="width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 6px solid #8b6738; box-shadow: 0 20px 50px rgba(107, 68, 35, 0.4);">
+            </div>
+            <div class="day-emoji">🍫</div>
+            <div class="day-number">Day 3 of 7</div>
+            <h1 class="day-title">Chocolate Day</h1>
+            <p class="day-date">February 9, 2026</p>
+        </div>
+
+        <div class="content-card">
+            <div class="message">
+                <p>Dear Ojasya,</p>
+                
+                <p>They say life is like a box of chocolates — you never know what you're going to get. But with you, every moment is <span class="highlight">sweet, delightful, and worth savoring</span>.</p>
+
+                <p>Today is Chocolate Day, and just like these treats, you bring sweetness into my life in ways I never expected. Each type of chocolate has its own flavor, its own character — just like the different moments we share together.</p>
+
+                <div class="chocolate-box">
+                    <div class="chocolate-item">
+                        <span class="chocolate-emoji">🍫</span>
+                        <span class="chocolate-label">Dark Chocolate</span>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Deep conversations that last for hours</p>
+                    </div>
+
+                    <div class="chocolate-item">
+                        <span class="chocolate-emoji">🍬</span>
+                        <span class="chocolate-label">Milk Chocolate</span>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Comfortable silences and easy moments</p>
+                    </div>
+
+                    <div class="chocolate-item">
+                        <span class="chocolate-emoji">🍰</span>
+                        <span class="chocolate-label">White Chocolate</span>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Pure joy when we're together</p>
+                    </div>
+
+                    <div class="chocolate-item">
+                        <span class="chocolate-emoji">🧁</span>
+                        <span class="chocolate-label">Caramel Filled</span>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Unexpected surprises and sweet moments</p>
+                    </div>
+
+                    <div class="chocolate-item">
+                        <span class="chocolate-emoji">🍪</span>
+                        <span class="chocolate-label">Cookie Crunch</span>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Fun adventures and shared laughter</p>
+                    </div>
+
+                    <div class="chocolate-item">
+                        <span class="chocolate-emoji">🍓</span>
+                        <span class="chocolate-label">Strawberry</span>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Fresh and exciting new experiences</p>
+                    </div>
+                </div>
+
+                <p>Just like the perfect chocolate melts in your mouth, being with you feels <span class="highlight">effortless and natural</span>. You don't have to be anything other than yourself — and that's exactly what makes you so special.</p>
+
+                <div class="sweet-quote">
+                    "All you need is love. But a little chocolate now and then doesn't hurt." <br>— Charles M. Schulz
+                </div>
+
+                <p>Today, I want you to remember that you deserve all the sweetness life has to offer. You deserve to be celebrated, to be cherished, and to know how much joy you bring to those around you.</p>
+
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="personal-note">
+                <p><strong>Sweet thoughts for you:</strong></p>
+                <div class="decorative-line"></div>
+                <p>Ojasya, if I could give you all the chocolates in the world, it still wouldn't be enough to show you how sweet you make my life. Thank you for being the kind of person who makes every day a little brighter. Here's to Day 3 of our Valentine's Week — may it be as sweet as you are! 🍫💕</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dayDate = new Date("February 9, 2026");
+        const now = new Date();
+        dayDate.setHours(0, 0, 0, 0);
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+        if (today < dayDate) {
+            alert("This day hasn't unlocked yet! Come back on February 9th 🍫");
+            window.location.href = 'week.html';
+        }
+
+        if (!localStorage.getItem('valentineAccepted')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
