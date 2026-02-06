@@ -40,39 +40,16 @@
             text-decoration: none;
             font-size: 1.1rem;
             margin-bottom: 30px;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: var(--light-purple);
         }
 
         .day-header {
             text-align: center;
             margin-bottom: 50px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .day-emoji {
             font-size: 5rem;
             margin-bottom: 20px;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.1); }
         }
 
         .day-title {
@@ -86,7 +63,6 @@
         .day-date {
             font-size: 1.2rem;
             color: var(--light-purple);
-            margin-bottom: 10px;
         }
 
         .day-number {
@@ -98,27 +74,10 @@
 
         .content-card {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             border-radius: 30px;
             padding: 50px;
-            margin-bottom: 30px;
             box-shadow: 0 20px 60px rgba(155, 89, 182, 0.15);
             border-left: 5px solid var(--promise-purple);
-            animation: fadeInUp 0.8s ease-out;
-            animation-delay: 0.2s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .message {
@@ -137,22 +96,12 @@
             font-style: italic;
         }
 
-        .promises-container {
-            margin: 50px 0;
-        }
-
         .promise-card {
             background: linear-gradient(135deg, var(--soft-lavender), white);
             padding: 35px;
             border-radius: 20px;
             margin-bottom: 25px;
             border-left: 4px solid var(--promise-purple);
-            box-shadow: 0 10px 30px rgba(155, 89, 182, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .promise-card:hover {
-            transform: translateX(10px);
         }
 
         .promise-number {
@@ -174,13 +123,11 @@
             font-size: 1.6rem;
             color: var(--promise-purple);
             margin-bottom: 15px;
-            font-weight: 700;
         }
 
         .promise-text {
             font-size: 1.15rem;
             line-height: 1.8;
-            color: var(--text);
         }
 
         .seal-section {
@@ -205,7 +152,6 @@
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            box-shadow: 0 15px 40px rgba(155, 89, 182, 0.3);
         }
 
         .decorative-line {
@@ -214,121 +160,115 @@
             background: linear-gradient(90deg, transparent, var(--promise-purple), transparent);
             margin: 30px auto;
         }
-
-        @media (max-width: 768px) {
-            .content-card {
-                padding: 35px 25px;
-            }
-
-            .message {
-                font-size: 1.1rem;
-            }
-
-            .promise-card {
-                padding: 25px 20px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="week.html" class="back-button">← Back to Valentine's Week</a>
+<div class="container">
+    <a href="week.html" class="back-button">← Back to Valentine's Week</a>
 
-        <div class="day-header">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <img src="https://i.pinimg.com/736x/4d/45/4d/4d454dab379b142a80010e991888eb97.jpg" 
-                     alt="Romantic promises" 
-                     style="width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 6px solid #bb8fce; box-shadow: 0 20px 50px rgba(155, 89, 182, 0.4);">
-            </div>
-            <div class="day-emoji">💫</div>
-            <div class="day-number">Day 5 of 7</div>
-            <h1 class="day-title">Promise Day</h1>
-            <p class="day-date">February 11, 2026</p>
+    <div class="day-header">
+        <div style="margin-bottom: 30px;">
+            <img src="https://i.pinimg.com/736x/4d/45/4d/4d454dab379b142a80010e991888eb97.jpg"
+                 style="width:280px;height:280px;border-radius:50%;border:6px solid #bb8fce;">
         </div>
-
-        <div class="content-card">
-            <div class="message">
-                <p>Dear Ojasya,</p>
-                
-                <p>Today is Promise Day — a day not just for making promises, but for <span class="highlight">honoring commitments and showing you the sincerity of my intentions</span>.</p>
-
-                <p>Promises aren't just words. They're commitments we make to the people we care about, and I don't take them lightly. So today, I want to share with you the promises I make from my heart.</p>
-            </div>
-
-            <div class="promises-container">
-                <div class="promise-card">
-                    <div class="promise-number">1</div>
-                    <h3 class="promise-title">I Promise to Always Listen</h3>
-                    <p class="promise-text">Whether you need to share your joys, your worries, or just talk about your day — I promise to be present and truly hear you. Your thoughts and feelings matter to me.</p>
-                </div>
-
-                <div class="promise-card">
-                    <div class="promise-number">2</div>
-                    <h3 class="promise-title">I Promise to Celebrate You</h3>
-                    <p class="promise-text">Not just on special occasions, but every single day. I promise to remind you of your worth, your strengths, and all the incredible things that make you, you.</p>
-                </div>
-
-                <div class="promise-card">
-                    <div class="promise-number">3</div>
-                    <h3 class="promise-title">I Promise to Be Honest</h3>
-                    <p class="promise-text">Even when it's difficult, I promise to communicate openly and truthfully with you. Trust is built on honesty, and I value what we have too much to ever compromise that.</p>
-                </div>
-
-                <div class="promise-card">
-                    <div class="promise-number">4</div>
-                    <h3 class="promise-title">I Promise to Make You Smile</h3>
-                    <p class="promise-text">Through silly jokes, unexpected gestures, or just being there when you need a pick-me-up — I promise to do my best to bring happiness into your life, just as you bring it into mine.</p>
-                </div>
-
-                <div class="promise-card">
-                    <div class="promise-number">5</div>
-                    <h3 class="promise-title">I Promise to Support Your Dreams</h3>
-                    <p class="promise-text">Whatever you aspire to achieve, wherever you want to go — I promise to be your biggest cheerleader and to encourage you every step of the way.</p>
-                </div>
-
-                <div class="promise-card">
-                    <div class="promise-number">6</div>
-                    <h3 class="promise-title">I Promise to Be Patient</h3>
-                    <p class="promise-text">We all have our moments — good days and challenging ones. I promise to be understanding, patient, and kind, even when things get tough.</p>
-                </div>
-
-                <div class="promise-card">
-                    <div class="promise-number">7</div>
-                    <h3 class="promise-title">I Promise to Cherish What We Have</h3>
-                    <p class="promise-text">Every conversation, every shared moment, every memory we create together — I promise to treasure them all and never take you for granted.</p>
-                </div>
-            </div>
-
-            <div class="seal-section">
-                <div class="seal-emoji">🤝</div>
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--promise-purple); margin-bottom: 20px;">These Promises Are Sealed with Sincerity</h3>
-                <p style="font-size: 1.15rem; line-height: 1.8;">Ojasya, I make these promises to you not because I have to, but because I <span class="highlight">want to</span>. You deserve someone who values you, respects you, and is committed to being their best self for you. That's what I strive to be.</p>
-            </div>
-
-            <div class="decorative-line"></div>
-
-            <div class="personal-note">
-                <p><strong>My solemn vow to you:</strong></p>
-                <div class="decorative-line"></div>
-                <p>These aren't just promises for today, Ojasya. These are commitments I make for every day we share together. Thank you for inspiring me to be someone worthy of making these promises. Here's to Day 5, and to a future filled with kept promises and beautiful moments! 💫💕</p>
-            </div>
-        </div>
+        <div class="day-emoji">💫</div>
+        <div class="day-number">Day 5 of 7</div>
+        <h1 class="day-title">Promise Day</h1>
+        <p class="day-date">February 11, 2026</p>
     </div>
 
-    <script>
-        const dayDate = new Date("February 11, 2026");
-        const now = new Date();
-        dayDate.setHours(0, 0, 0, 0);
-        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    <div class="content-card">
+        <div class="message">
+            <p>Dear Ojasya,</p>
 
-        if (today < dayDate) {
-            alert("This day hasn't unlocked yet! Come back on February 11th 💫");
-            window.location.href = 'week.html';
-        }
+            <p>Today is Promise Day and I want to be honest in a way that actually matters.</p>
 
-        if (!localStorage.getItem('valentineAccepted')) {
-            window.location.href = 'index.html';
-        }
-    </script>
+            <p>I haven’t always been the best at keeping promises. Sometimes I overpromise, sometimes I fall short, and sometimes I mean well but don’t execute perfectly. I won’t pretend otherwise.</p>
+
+            <p>But if there’s one promise I know I can stand by one I choose every single day it’s this:
+                <span class="highlight">I promise to never leave your side.</span>
+            </p>
+
+            <p>This isn’t about perfect words. It’s about choosing you, again and again and owning it when I mess up.</p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">1</div>
+            <h3 class="promise-title">I Promise to Be Honest Even When It’s Messy</h3>
+            <p class="promise-text">
+                I promise to admit when I’m wrong, when I forget, or when I fall short. You deserve honesty, not perfection.
+            </p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">2</div>
+            <h3 class="promise-title">I Promise to Stay</h3>
+            <p class="promise-text">
+                Not just on easy days. Not just when things are light. I promise to stay when things are confusing or hard.
+            </p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">3</div>
+            <h3 class="promise-title">I Promise to Try Even When I Fail</h3>
+            <p class="promise-text">
+                I may not always get it right, but I promise I’ll never stop trying.
+            </p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">4</div>
+            <h3 class="promise-title">I Promise to Make Space for You</h3>
+            <p class="promise-text">
+                Your moods, your thoughts, your silence all of you is welcome here.
+            </p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">5</div>
+            <h3 class="promise-title">I Promise to Protect What We Have</h3>
+            <p class="promise-text">
+                Our talks, our laughter, our bond I won’t take any of it lightly.
+            </p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">6</div>
+            <h3 class="promise-title">I Promise to Be Better Than Yesterday</h3>
+            <p class="promise-text">
+                Not perfect. Just better. One step at a time.
+            </p>
+        </div>
+
+        <div class="promise-card">
+            <div class="promise-number">7</div>
+            <h3 class="promise-title">I Promise to Never Leave Your Side</h3>
+            <p class="promise-text">
+                No matter how things change or where life takes us this promise stays.
+            </p>
+        </div>
+
+        <div class="seal-section">
+            <div class="seal-emoji">🤝</div>
+            <p>
+                I may stumble, but I won’t disappear.
+                I may mess up, but I won’t walk away.
+                <span class="highlight">You’re not a chapter I plan to close.</span>
+            </p>
+        </div>
+
+        <div class="decorative-line"></div>
+
+        <div class="personal-note">
+            <p><strong>My most honest promise to you:</strong></p>
+            <div class="decorative-line"></div>
+            <p>
+                I know I haven’t always been great at keeping promises.
+                But I promise you this I’m here, I’m staying, and I’m choosing you.
+                Not just today. Every day I get the chance. 💫
+            </p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
