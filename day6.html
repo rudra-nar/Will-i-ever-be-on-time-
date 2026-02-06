@@ -40,39 +40,16 @@
             text-decoration: none;
             font-size: 1.1rem;
             margin-bottom: 30px;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: var(--light-coral);
         }
 
         .day-header {
             text-align: center;
             margin-bottom: 50px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .day-emoji {
             font-size: 5rem;
             margin-bottom: 20px;
-            animation: hugAnimation 2s ease-in-out infinite;
-        }
-
-        @keyframes hugAnimation {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.15); }
         }
 
         .day-title {
@@ -86,7 +63,6 @@
         .day-date {
             font-size: 1.2rem;
             color: var(--light-coral);
-            margin-bottom: 10px;
         }
 
         .day-number {
@@ -98,27 +74,10 @@
 
         .content-card {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             border-radius: 30px;
             padding: 50px;
-            margin-bottom: 30px;
             box-shadow: 0 20px 60px rgba(255, 107, 107, 0.15);
             border-left: 5px solid var(--hug-coral);
-            animation: fadeInUp 0.8s ease-out;
-            animation-delay: 0.2s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .message {
@@ -150,11 +109,6 @@
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 10px 25px rgba(255, 107, 107, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .hug-type-card:hover {
-            transform: translateY(-5px);
         }
 
         .hug-emoji {
@@ -168,7 +122,6 @@
             font-size: 1.4rem;
             color: var(--hug-coral);
             margin-bottom: 10px;
-            font-weight: 700;
         }
 
         .hug-type-desc {
@@ -184,7 +137,6 @@
             border-radius: 15px;
             font-style: italic;
             font-size: 1.2rem;
-            line-height: 1.8;
             text-align: center;
         }
 
@@ -195,164 +147,113 @@
             border-radius: 30px;
             margin: 40px 0;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.3);
         }
 
         .virtual-hug-emoji {
             font-size: 5rem;
             margin-bottom: 20px;
-            animation: hugPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes hugPulse {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.2) rotate(5deg); }
         }
 
         .personal-note {
             background: rgba(255, 255, 255, 0.95);
             border: 3px solid var(--hug-coral);
-            color: var(--text);
             padding: 40px;
             border-radius: 25px;
             margin-top: 40px;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
         }
 
         .decorative-line {
             width: 100px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, white, transparent);
+            background: linear-gradient(90deg, transparent, var(--hug-coral), transparent);
             margin: 25px auto;
-        }
-
-        @media (max-width: 768px) {
-            .content-card {
-                padding: 35px 25px;
-            }
-
-            .message {
-                font-size: 1.1rem;
-            }
-
-            .hug-types {
-                grid-template-columns: 1fr;
-            }
-
-            .virtual-hug-section {
-                padding: 35px 25px;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="week.html" class="back-button">← Back to Valentine's Week</a>
+<div class="container">
+    <a href="week.html" class="back-button">← Back to Valentine's Week</a>
 
-        <div class="day-header">
-            <div class="day-emoji">💑</div>
-            <div class="day-number">Day 6 of 7</div>
-            <h1 class="day-title">Hug Day</h1>
-            <p class="day-date">February 12, 2026</p>
-        </div>
-
-        <div class="content-card">
-            <div class="message">
-                <p>Dear Ojasya,</p>
-                
-                <p>There's something magical about a hug. It's a gesture that needs no words, yet says everything. It can <span class="highlight">comfort, celebrate, reassure, and connect</span> — all in a single embrace.</p>
-
-                <p>Today is Hug Day, and while I can't physically wrap my arms around you right now, I want you to feel the warmth and care that a hug represents.</p>
-
-                <div class="quote-box">
-                    "A hug is a silent way of saying 'You matter to me.'"
-                </div>
-
-                <p>Different hugs mean different things, and I want you to know that you deserve every type of hug there is:</p>
-            </div>
-
-            <div class="hug-types">
-                <div class="hug-type-card">
-                    <span class="hug-emoji">🤗</span>
-                    <h3 class="hug-type-title">The Comfort Hug</h3>
-                    <p class="hug-type-desc">For when things get tough and you need reassurance that everything will be okay.</p>
-                </div>
-
-                <div class="hug-type-card">
-                    <span class="hug-emoji">🎉</span>
-                    <h3 class="hug-type-title">The Celebration Hug</h3>
-                    <p class="hug-type-desc">For all your wins, big and small, because your achievements deserve to be celebrated!</p>
-                </div>
-
-                <div class="hug-type-card">
-                    <span class="hug-emoji">💖</span>
-                    <h3 class="hug-type-title">The "Just Because" Hug</h3>
-                    <p class="hug-type-desc">Sometimes you don't need a reason — just a reminder that you're thought of and cared for.</p>
-                </div>
-
-                <div class="hug-type-card">
-                    <span class="hug-emoji">🌟</span>
-                    <h3 class="hug-type-title">The Encouragement Hug</h3>
-                    <p class="hug-type-desc">For when you're about to do something scary or challenging — a hug that says "You've got this!"</p>
-                </div>
-
-                <div class="hug-type-card">
-                    <span class="hug-emoji">😊</span>
-                    <h3 class="hug-type-title">The Grateful Hug</h3>
-                    <p class="hug-type-desc">A hug that says "Thank you for being you and for being in my life."</p>
-                </div>
-
-                <div class="hug-type-card">
-                    <span class="hug-emoji">🌈</span>
-                    <h3 class="hug-type-title">The "Everything's Better" Hug</h3>
-                    <p class="hug-type-desc">The kind that makes bad days a little brighter and good days even better.</p>
-                </div>
-            </div>
-
-            <div class="virtual-hug-section">
-                <div class="virtual-hug-emoji">🤗</div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 25px; font-family: 'Playfair Display', serif;">Sending You the Warmest Virtual Hug</h2>
-                <div class="decorative-line"></div>
-                <p style="font-size: 1.25rem; line-height: 1.9; margin-top: 25px;">
-                    Close your eyes for a moment and imagine a warm embrace — the kind that makes you feel safe, valued, and completely at ease. That's what I'm sending your way today, Ojasya. A hug that says you're appreciated, you're important, and you're never alone. 💕
-                </p>
-            </div>
-
-            <div class="message">
-                <p>Hugs have been scientifically proven to reduce stress, boost happiness, and make us feel connected. But beyond the science, <span class="highlight">a hug is one of the simplest and most powerful ways to show someone you care</span>.</p>
-
-                <p>So today, I want you to know: you are hugged, you are held, and you are cherished. Not just today on Hug Day, but every single day.</p>
-
-                <div style="text-align: center; margin: 40px 0; font-size: 4rem;">
-                    🫂 💕 🫂
-                </div>
-            </div>
-
-            <div class="personal-note">
-                <p><strong>💕 A warm message for you 💕</strong></p>
-                <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, var(--hug-coral), transparent); margin: 25px auto;"></div>
-                <p>Ojasya, thank you for being someone I want to celebrate, comfort, and support. You deserve all the hugs in the world, and I hope you feel the warmth of this virtual embrace. We're almost at the end of our Valentine's Week, but the care and affection? That's forever. Here's to Day 6! 🤗💕</p>
-            </div>
-        </div>
+    <div class="day-header">
+        <div class="day-emoji">💑</div>
+        <div class="day-number">Day 6 of 7</div>
+        <h1 class="day-title">Hug Day</h1>
+        <p class="day-date">February 12, 2026</p>
     </div>
 
-    <script>
-        const dayDate = new Date("February 12, 2026");
-        const now = new Date();
-        dayDate.setHours(0, 0, 0, 0);
-        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    <div class="content-card">
+        <div class="message">
+            <p>Dear Ojasya,</p>
 
-        if (today < dayDate) {
-            alert("This day hasn't unlocked yet! Come back on February 12th 💑");
-            window.location.href = 'week.html';
-        }
+            <p>Hug Day feels very <em>us</em>, doesn’t it?</p>
 
-        if (!localStorage.getItem('valentineAccepted')) {
-            window.location.href = 'index.html';
-        }
-    </script>
+            <p>Because the moment we get even the <span class="highlight">slightest bit of solitude</span> ek second we somehow end up hugging. No planning, no warning. It just… happens. Automatically. Like muscle memory.</p>
+
+            <p>And honestly? I love that about us.</p>
+
+            <p>So today is officially dedicated to all those hugs the quick ones, the tight ones, the ‘chhod hi nahi rahe’ ones.</p>
+        </div>
+
+        <div class="hug-types">
+            <div class="hug-type-card">
+                <span class="hug-emoji">🤗</span>
+                <h3 class="hug-type-title">The Automatic Hug</h3>
+                <p class="hug-type-desc">The one that happens the moment we’re alone. Zero thought, full comfort.</p>
+            </div>
+
+            <div class="hug-type-card">
+                <span class="hug-emoji">😂</span>
+                <h3 class="hug-type-title">The Random Hug</h3>
+                <p class="hug-type-desc">Middle of laughing, talking, doing nothing suddenly, hug.</p>
+            </div>
+
+            <div class="hug-type-card">
+                <span class="hug-emoji">💖</span>
+                <h3 class="hug-type-title">The Soft Hug</h3>
+                <p class="hug-type-desc">Slow, calm, and quiet the kind that makes everything feel okay.</p>
+            </div>
+
+            <div class="hug-type-card">
+                <span class="hug-emoji">🫂</span>
+                <h3 class="hug-type-title">The Long One</h3>
+                <p class="hug-type-desc">When neither of us wants to let go… so we don’t.</p>
+            </div>
+
+            <div class="hug-type-card">
+                <span class="hug-emoji">🌟</span>
+                <h3 class="hug-type-title">The Reassurance Hug</h3>
+                <p class="hug-type-desc">No words. Just “main hoon na.”</p>
+            </div>
+
+            <div class="hug-type-card">
+                <span class="hug-emoji">💕</span>
+                <h3 class="hug-type-title">The ‘Us’ Hug</h3>
+                <p class="hug-type-desc">The kind that feels like home.</p>
+            </div>
+        </div>
+
+        <div class="virtual-hug-section">
+            <div class="virtual-hug-emoji">🤗</div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Sending You a Big, Tight Hug</h2>
+            <div class="decorative-line"></div>
+            <p style="font-size: 1.25rem; line-height: 1.9;">
+                Until the next time we find a moment alone and instinctively hug consider this a warm reminder that you’re always held, always wanted, and always safe with me. 💕
+            </p>
+        </div>
+
+        <div class="personal-note">
+            <p><strong>💕 Just between us 💕</strong></p>
+            <div class="decorative-line"></div>
+            <p>
+                Ojasya, if hugs could be saved, I’d collect every single one of ours.
+                The quick ones. The lazy ones. The “bas thoda aur” ones.
+                Here’s to Hug Day — and to us hugging every chance we get. 🤍
+            </p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
